@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-  <title>hello! | welcome</title>
+  <title>Image-to-ASCII | welcome</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
@@ -15,7 +15,7 @@
   
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="hello!" />
+  <meta name="twitter:title" content="Image-to-ASCII" />
   <meta name="twitter:description" content=""/>
   <meta name="twitter:site" content="https://twitter.com/firesonmen" />
   <meta name="twitter:creator" content="https://twitter.com/firesonmen" />
@@ -47,29 +47,16 @@
 
 <script type="application/ld+json">
   
-    {
-      "@context" : "http://schema.org",
-      "@type" : "BlogPosting",
-      "mainEntityOfPage": {
-            "@type": "WebPage",
-            "@id": "https:\/\/smaran-m.github.io\/"
+    { 
+      "@context": "http://schema.org", 
+      "@type": "WebSite", 
+      "url": "https:\/\/smaran-m.github.io\/projects\/i2a\/",
+      "name": "Image-to-ASCII",
+      "author": {
+        "@type": "Person",
+        "name": ""
       },
-      "articleSection" : "blog",
-      "name" : "hello!",
-      "headline" : "hello!",
-      "description" : "",
-      "inLanguage" : "en-US",
-      "author" : "",
-      "creator" : "",
-      "publisher": "",
-      "accountablePerson" : "",
-      "copyrightHolder" : "",
-      "copyrightYear" : "2022",
-      "datePublished": "2022-05-27 13:47:39 -0400 -0400",
-      "dateModified" : "2022-05-27 13:47:39 -0400 -0400",
-      "url" : "https:\/\/smaran-m.github.io\/blog\/hello\/",
-      "wordCount" : "93",
-      "keywords" : ["Blog"]
+      "description": ""
     }
   
   </script>
@@ -94,12 +81,12 @@
       </li>
     
       <li>
-        <a  class="active"
-         href="/blog">blog</a>
+        <a  href="/blog">blog</a>
       </li>
     
       <li>
-        <a  href="/projects">projects</a>
+        <a  class="active"
+         href="/projects">projects</a>
       </li>
     
   </ul>
@@ -114,38 +101,42 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">hello!</h1>
-            <time datetime="2022-05-27 13:47:39 -0400 -0400" class="post__date">May 27 2022</time> 
+            <h1 id="post__title">Image-to-ASCII</h1>
+            <time datetime="2023-01-04 23:25:02 &#43;0400 &#43;04" class="post__date">Jan 4 2023</time> 
           </header>
           <article class="post__content">
               
-<h1 id="my-name-is-smaran">my name is smaran.</h1>
-<p>i am a third-year computer science student  based in atlanta 🐝.
-i do not like using capitalized letters, but i do like using periods.
-this is where i will be posting about my other likes and dislikes.</p>
-<p>you can look at my art with your eyes <a href="twitter.com/firesonmen" 
-  
-  
->here</a></p>
-<p>you can look at my code with your computer(s) <a href="https://github.com/smaran-m" 
+<p><a href="https://github.com/smaran-m/image-to-ascii" 
   
    target="_blank" rel="noreferrer noopener" 
->here</a></p>
-<h1 id="this-is-my-website">this is my website.</h1>
-<p>there are many like it, but this one is mine.
-i built it myself, with a little help from my <a href="https://gohugo.io/" 
+><img src="/images/roses1.jpg" alt="banner"></a></p>
+<h2 id="usage">Usage<a class="anchor" href="#usage">#</a></h2>
+<ul>
+<li>install PIL: <code>pip install pillow</code></li>
+<li>put the images to convert in <code>/data</code>. they&rsquo;ll be output to <code>/out</code></li>
+<li>at size choice, type 0 if no preference</li>
+<li>to override size limits, type -1 on the output quality dialogue.</li>
+</ul>
+<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
+<p><img src="https://media.discordapp.net/attachments/1028558749968900108/1047895862350729226/psps3.jpeg" alt="kitty cat"><img src="https://media.discordapp.net/attachments/1028558749968900108/1047895652866199613/0.jpeg" alt="kitty cat in the MATRIX"></p>
+<p>supports different quality outputs:
+<img src="https://pbs.twimg.com/media/Fi1pqewUoAAKzW-?format=jpg&amp;name=medium" alt="low quality R34">
+<img src="https://pbs.twimg.com/media/Fi1p3QfUAAAcSL9?format=jpg&amp;name=large" alt="higher quality R34"></p>
+<h2 id="motivations">Motivations<a class="anchor" href="#motivations">#</a></h2>
+<p>A few years ago, I found out about <a href="https://www.a1k0n.net/2011/07/20/donut-math.html" 
   
    target="_blank" rel="noreferrer noopener" 
->friends</a></p>
-<p>enjoy your stay ♡</p>
-<h2 id="contact">contact.<a class="anchor" href="#contact">#</a></h2>
-<p><a href="https://www.twitter.com/smaran_" 
-  
-   target="_blank" rel="noreferrer noopener" 
->twitter</a><br><a href="mailto:sammish22@gmail.com" 
-   target="_blank" 
-  
->email</a></p>
+>donut.c</a> which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.</p>
+<p>Recently, reminded of this, I wrote a script to make similar kinds of art.</p>
+<h2 id="notes">Notes<a class="anchor" href="#notes">#</a></h2>
+<p>I do not output the values as .txt files or output text to the terminal, since that doesn&rsquo;t support colors (which I, personally, wanted). One potential option is outputting it as HTML which can then be embedded at a website, but that&rsquo;s a bit tedious. Maybe some day.</p>
+<p>I used pillow to output to an image instead. In a sense this is pseudo-ascii, you have no access to the actual text that&rsquo;s generated.</p>
+<p>How it works: chunks of differing n*n pixels (depending on size choice) get their average brightness mapped to a certain ASCII character.</p>
+<p>I use this character set, but it&rsquo;s easy enough to change: <code>$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,\&quot;^`'.</code></p>
+<p>donut.c only uses <code>.,-~:;=!*#$@</code>!</p>
+<p>This can potentially generate massive images so default parameters sacrifice details on larger scales to control output size.</p>
+<h2 id="acknowledgements">Acknowledgements<a class="anchor" href="#acknowledgements">#</a></h2>
+<p>Thank you to Andy Sloane and Pushkara Sharma.</p>
 
 
               

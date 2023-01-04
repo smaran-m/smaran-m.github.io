@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blogs on realm</title>
+    <title>Blogs on welcome</title>
     <link>https://smaran-m.github.io/blog/</link>
-    <description>Recent content in Blogs on realm</description>
+    <description>Recent content in Blogs on welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022</copyright>
@@ -14,8 +14,10 @@
       <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
       
       <guid>https://smaran-m.github.io/blog/hello/</guid>
-      <description>this is my website. there are many like it, but this one is mine
-contact. do not contact me thanks</description>
+      <description>my name is smaran. i am a third-year computer science student based in atlanta 🐝. i do not like using capitalized letters, but i do like using periods. this is where i will be posting about my other likes and dislikes.
+you can look at my art with your eyes here
+you can look at my code with your computer(s) here
+this is my website. there are many like it, but this one is mine.</description>
     </item>
     
   </channel>

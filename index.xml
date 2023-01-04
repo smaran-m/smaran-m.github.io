@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>realm</title>
+    <title>welcome</title>
     <link>https://smaran-m.github.io/</link>
-    <description>Recent content on realm</description>
+    <description>Recent content on welcome</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2022</copyright>
-    <lastBuildDate>Fri, 27 May 2022 13:48:19 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 04 Jan 2023 23:25:02 +0400</lastBuildDate><atom:link href="https://smaran-m.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>D&amp;D</title>
-      <link>https://smaran-m.github.io/projects/dnd/</link>
-      <pubDate>Fri, 27 May 2022 13:48:19 -0400</pubDate>
+      <title>Image-to-ASCII</title>
+      <link>https://smaran-m.github.io/projects/i2a/</link>
+      <pubDate>Wed, 04 Jan 2023 23:25:02 +0400</pubDate>
       
-      <guid>https://smaran-m.github.io/projects/dnd/</guid>
-      <description></description>
+      <guid>https://smaran-m.github.io/projects/i2a/</guid>
+      <description>Usage  install PIL: pip install pillow put the images to convert in /data. they&amp;rsquo;ll be output to /out at size choice, type 0 if no preference to override size limits, type -1 on the output quality dialogue.  Examples supports different quality outputs: Motivations A few years ago, I found out about donut.c which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.</description>
     </item>
     
     <item>
@@ -23,17 +23,10 @@
       <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
       
       <guid>https://smaran-m.github.io/blog/hello/</guid>
-      <description>this is my website. there are many like it, but this one is mine
-contact. do not contact me thanks</description>
-    </item>
-    
-    <item>
-      <title>About</title>
-      <link>https://smaran-m.github.io/about/</link>
-      <pubDate>Fri, 27 May 2022 12:34:57 -0400</pubDate>
-      
-      <guid>https://smaran-m.github.io/about/</guid>
-      <description></description>
+      <description>my name is smaran. i am a third-year computer science student based in atlanta 🐝. i do not like using capitalized letters, but i do like using periods. this is where i will be posting about my other likes and dislikes.
+you can look at my art with your eyes here
+you can look at my code with your computer(s) here
+this is my website. there are many like it, but this one is mine.</description>
     </item>
     
   </channel>
