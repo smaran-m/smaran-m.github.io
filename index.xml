@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>welcome</title>
+    <title>sm</title>
     <link>https://smaran-m.github.io/</link>
-    <description>Recent content on welcome</description>
+    <description>Recent content on sm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2022</copyright>
+    <copyright>© 2023</copyright>
     <lastBuildDate>Wed, 04 Jan 2023 23:25:02 +0400</lastBuildDate><atom:link href="https://smaran-m.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Image-to-ASCII</title>
@@ -23,10 +23,10 @@
       <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
       
       <guid>https://smaran-m.github.io/blog/hello/</guid>
-      <description>my name is smaran. i am a third-year computer science student based in atlanta 🐝. i do not like using capitalized letters, but i do like using periods. this is where i will be posting about my other likes and dislikes.
+      <description>my name is Smaran. I am a third-year computer science student based in Atlanta, GA 🐝. I have a variety of interests that are hopefully evident from the content of this website.
 you can look at my art with your eye(s) here
 you can look at my code with your computer(s) here
-this is my website. there are many like it, but this one is mine.</description>
+this is my website. there are many like it, but this one is mine. i built it myself, with a little help from my friend hugo</description>
     </item>
     
   </channel>
