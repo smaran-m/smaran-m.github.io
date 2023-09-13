@@ -2,12 +2,12 @@
 <html lang="en-us">
 
 <head>
-  <title>Image-to-ASCII | realm</title>
+  <title>Maptisse: A Tilemap Generator | realm</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
   <meta name="description" content="">
-  <meta name="keywords" content="ascii , image-manipulation , python3 , python , pillow , PIL">
+  <meta name="keywords" content="grid , shading , Avalonia , .NET , GUI , C#">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
   
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Image-to-ASCII" />
+  <meta name="twitter:title" content="Maptisse: A Tilemap Generator" />
   <meta name="twitter:description" content=""/>
   <meta name="twitter:site" content="https://twitter.com/smaran_" />
   <meta name="twitter:creator" content="https://twitter.com/smaran_" />
@@ -50,8 +50,8 @@
     { 
       "@context": "http://schema.org", 
       "@type": "WebSite", 
-      "url": "https:\/\/smaran-m.github.io\/projects\/i2a\/",
-      "name": "Image-to-ASCII",
+      "url": "https:\/\/smaran-m.github.io\/projects\/gridshade\/",
+      "name": "Maptisse: A Tilemap Generator",
       "author": {
         "@type": "Person",
         "name": ""
@@ -105,40 +105,45 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">Image-to-ASCII</h1>
-            <time datetime="2023-01-04 23:25:02 &#43;0400 &#43;0400" class="post__date">Jan 4 2023</time> 
+            <h1 id="post__title">Maptisse: A Tilemap Generator</h1>
+            <time datetime="2023-09-13 14:20:09 -0400 EDT" class="post__date">Sep 13 2023</time> 
           </header>
           <article class="post__content">
               
-<p><a href="https://github.com/smaran-m/image-to-ascii" 
+<p><a href="https://github.com/smaran-m/GridShadingApp/" 
   
    target="_blank" rel="noreferrer noopener" 
-><img src="/images/roses1.jpg" alt="banner"></a></p>
+><img src="/images/maptisse-banner.png" alt="banner"></a></p>
 <h2 id="usage">Usage<a class="anchor" href="#usage">#</a></h2>
 <ul>
-<li>install PIL: <code>pip install pillow</code></li>
-<li>run the script</li>
-<li>images will be output to <code>./out</code></li>
+<li>build with <code>dotnet build</code></li>
+<li>run with <code>dotnet run</code></li>
+<li>click and drag to fill in squares</li>
+<li>select tileset with dropdown menu</li>
+<li>generate!</li>
 </ul>
-<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
-<p><img src="https://media.discordapp.net/attachments/1028558749968900108/1047895862350729226/psps3.jpeg" alt="kitty cat"><img src="https://media.discordapp.net/attachments/1028558749968900108/1047895652866199613/0.jpeg" alt="kitty cat in the MATRIX"></p>
-<p>supports different quality outputs:
-<img src="https://pbs.twimg.com/media/Fi1pqewUoAAKzW-?format=jpg&amp;name=medium" alt="low quality R34">
-<img src="https://pbs.twimg.com/media/Fi1p3QfUAAAcSL9?format=jpg&amp;name=large" alt="higher quality R34"></p>
+<h2 id="features">Features<a class="anchor" href="#features">#</a></h2>
+<ul>
+<li>doodle around and generate tilemaps that work great for games and TTRPGs</li>
+<li>generates almost instantaneously, make quick changes on the fly</li>
+<li>save and load grid states as JSON files</li>
+<li>edit tileset at will in any image editor of your choice (resources/tilesets/)</li>
+</ul>
 <h2 id="motivations">Motivations<a class="anchor" href="#motivations">#</a></h2>
-<p>A few years ago, I found out about <a href="https://www.a1k0n.net/2011/07/20/donut-math.html" 
-  
-   target="_blank" rel="noreferrer noopener" 
->donut.c</a> which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.</p>
-<p>Recently, reminded of this, I wrote a script to automatically convert images to similar kinds of art.</p>
+<p>So I played around with a fully automated evolution sim in python back in high-school, but never got past the stage of procedurally generated levels. This is before I ever knew about Conway&rsquo;s game of life, I had just seen a couple simulations that were built upon the principles of having food spawn and some kind of population that would eat it.</p>
+<blockquote class="twitter-tweet"><p lang="en" dir="ltr">old procgen terrain I made in high school <a href="https://t.co/1tlvdBRXKJ">pic.twitter.com/1tlvdBRXKJ</a></p>&mdash; simple man (@smaran_) <a href="https://twitter.com/smaran_/status/1702054523316191714?ref_src=twsrc%5Etfw">September 13, 2023</a></blockquote> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+<p>Anyways, the maps looked pretty beautiful. I got them to change color based on temp, change shrubbery, water bodies. Didn&rsquo;t use any noise generation methods or anything (again, I was in high school). I wanted to recreate that, but more as a standalone experience, especially for D&amp;D, I wanted a desktop app that would let me doodle around and generate maps that I could use for my games quickly. Here&rsquo;s the culmination of that, but nowhere near finished.</p>
 <h2 id="notes">Notes<a class="anchor" href="#notes">#</a></h2>
-<p>I do not output the values as .txt files or output text to the terminal, since that doesn&rsquo;t support colors (which I, personally, wanted). One potential option is outputting it as HTML which can then be embedded, but that&rsquo;s a bit tedious. Maybe some day.</p>
-<p>I used pillow to output to an image instead. In a sense this is pseudo-ascii, you have no access to the actual text that&rsquo;s generated.</p>
-<p>How it works: chunks of differing n*n pixels (depending on size choice) get their average brightness mapped to a certain ASCII character.</p>
-<p>I use this character set, but it&rsquo;s easy enough to change: <code>$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,\&quot;^`'.</code><br>donut.c only uses <code>.,-~:;=!*#$@</code>!</p>
-<p>This can potentially generate massive images (when you approach n=1) so default parameters sacrifice details on larger scales to control output size.</p>
-<h2 id="acknowledgements">Acknowledgements<a class="anchor" href="#acknowledgements">#</a></h2>
-<p>Thank you to Andy Sloane and Pushkara Sharma.</p>
+<p>The application uses Avalonia, a modern .NET framework for cross-platform user interfaces. I was planning on putting out releases for Windows, Linux, and macOS, but I wasn&rsquo;t a fan of the binary size (around 40mb standalone, 9mb without dotnet). Until I figure out a way around that, you&rsquo;ll have to build it yourself.</p>
+<h2 id="future">Future<a class="anchor" href="#future">#</a></h2>
+<ul>
+<li>export tilemap to image</li>
+<li>define specific spots for random elements</li>
+<li>more complex generation logic (inside squares are filled in, etc.)</li>
+<li>use for ttrpg combat tracking</li>
+<li>in-built tileset editor</li>
+</ul>
+<hr>
 
 
               
@@ -149,16 +154,19 @@
     
     <li class="tag__item">
         <a class="tag__link" href="https://smaran-m.github.io/tags/graphics/">graphics</a>
+    </li>
+    <li class="tag__item">
+        <a class="tag__link" href="https://smaran-m.github.io/tags/tools/">tools</a>
     </li></ul>
 
  <div class="pagination">
   
-
-  
-    <a class="pagination__item" href="https://smaran-m.github.io/projects/gridshade/">
-      <span class="pagination__label">Next Post</span>
-      <span class="pagination__title" >Maptisse: A Tilemap Generator</span>
+    <a class="pagination__item" href="https://smaran-m.github.io/projects/i2a/">
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">Image-to-ASCII</span>
     </a>
+  
+
   
 </div>
 

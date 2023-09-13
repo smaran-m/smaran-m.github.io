@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Projects on realm</title>
-    <link>https://smaran-m.github.io/projects/</link>
-    <description>Recent content in Projects on realm</description>
+    <title>tools on realm</title>
+    <link>https://smaran-m.github.io/tags/tools/</link>
+    <description>Recent content in tools on realm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
-    <lastBuildDate>Wed, 13 Sep 2023 14:20:09 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Sep 2023 14:20:09 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Maptisse: A Tilemap Generator</title>
       <link>https://smaran-m.github.io/projects/gridshade/</link>
@@ -15,16 +15,6 @@
       
       <guid>https://smaran-m.github.io/projects/gridshade/</guid>
       <description>Usage  build with dotnet build run with dotnet run click and drag to fill in squares select tileset with dropdown menu generate!  Features  doodle around and generate tilemaps that work great for games and TTRPGs generates almost instantaneously, make quick changes on the fly save and load grid states as JSON files edit tileset at will in any image editor of your choice (resources/tilesets/)  Motivations So I played around with a fully automated evolution sim in python back in high-school, but never got past the stage of procedurally generated levels.</description>
-    </item>
-    
-    <item>
-      <title>Image-to-ASCII</title>
-      <link>https://smaran-m.github.io/projects/i2a/</link>
-      <pubDate>Wed, 04 Jan 2023 23:25:02 +0400</pubDate>
-      
-      <guid>https://smaran-m.github.io/projects/i2a/</guid>
-      <description>Usage  install PIL: pip install pillow run the script images will be output to ./out  Examples supports different quality outputs: Motivations A few years ago, I found out about donut.c which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.
-Recently, reminded of this, I wrote a script to automatically convert images to similar kinds of art.</description>
     </item>
     
   </channel>

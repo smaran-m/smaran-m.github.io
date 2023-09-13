@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>realm</title>
-    <link>https://smaran-m.github.io/</link>
-    <description>Recent content on realm</description>
+    <title>graphics on realm</title>
+    <link>https://smaran-m.github.io/tags/graphics/</link>
+    <description>Recent content in graphics on realm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
-    <lastBuildDate>Wed, 13 Sep 2023 14:20:09 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Sep 2023 14:20:09 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/tags/graphics/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Maptisse: A Tilemap Generator</title>
       <link>https://smaran-m.github.io/projects/gridshade/</link>
@@ -25,19 +25,6 @@
       <guid>https://smaran-m.github.io/projects/i2a/</guid>
       <description>Usage  install PIL: pip install pillow run the script images will be output to ./out  Examples supports different quality outputs: Motivations A few years ago, I found out about donut.c which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.
 Recently, reminded of this, I wrote a script to automatically convert images to similar kinds of art.</description>
-    </item>
-    
-    <item>
-      <title>hello!</title>
-      <link>https://smaran-m.github.io/blog/hello/</link>
-      <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
-      
-      <guid>https://smaran-m.github.io/blog/hello/</guid>
-      <description>my name is Smaran. I am a fourth-year computer science student based in Atlanta, GA 🐝. I have a variety of interests that will hopefully be evident when I get around to writing blog posts.
-you can look at my art with your eye(s) here
-you can look at my code with your computer(s) here
-hire me! my resume.
-this is my website. there are many like it, but this one is mine.</description>
     </item>
     
   </channel>

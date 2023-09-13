@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>general on sm</title>
+    <title>general on realm</title>
     <link>https://smaran-m.github.io/tags/general/</link>
-    <description>Recent content in general on sm</description>
+    <description>Recent content in general on realm</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
@@ -14,10 +14,11 @@
       <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
       
       <guid>https://smaran-m.github.io/blog/hello/</guid>
-      <description>my name is Smaran. I am a third-year computer science student based in Atlanta, GA 🐝. I have a variety of interests that are hopefully evident from the content of this website.
+      <description>my name is Smaran. I am a fourth-year computer science student based in Atlanta, GA 🐝. I have a variety of interests that will hopefully be evident when I get around to writing blog posts.
 you can look at my art with your eye(s) here
 you can look at my code with your computer(s) here
-this is my website. there are many like it, but this one is mine. i built it myself, with a little help from my friend hugo</description>
+hire me! my resume.
+this is my website. there are many like it, but this one is mine.</description>
     </item>
     
   </channel>
