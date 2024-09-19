@@ -2,7 +2,7 @@
 <html lang="en-us">
 
 <head>
-  <title>Image-to-ASCII | realm</title>
+  <title>Ripples | realm</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
@@ -15,7 +15,7 @@
   
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Image-to-ASCII" />
+  <meta name="twitter:title" content="Ripples" />
   <meta name="twitter:description" content=""/>
   <meta name="twitter:site" content="https://twitter.com/smaran_" />
   <meta name="twitter:creator" content="https://twitter.com/smaran_" />
@@ -50,8 +50,8 @@
     { 
       "@context": "http://schema.org", 
       "@type": "WebSite", 
-      "url": "https:\/\/smaran-m.github.io\/projects\/i2a\/",
-      "name": "Image-to-ASCII",
+      "url": "https:\/\/smaran-m.github.io\/projects\/ripples\/",
+      "name": "Ripples",
       "author": {
         "@type": "Person",
         "name": ""
@@ -105,40 +105,42 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">Image-to-ASCII</h1>
-            <time datetime="2023-01-04 23:25:02 &#43;0400 &#43;0400" class="post__date">Jan 4 2023</time> 
+            <h1 id="post__title">Ripples</h1>
+            <time datetime="2024-09-19 16:31:19 -0400 EDT" class="post__date">Sep 19 2024</time> 
           </header>
           <article class="post__content">
               
-<p><a href="https://github.com/smaran-m/image-to-ascii" 
+<p><a href="https://github.com/smaran-m/ascii-ripples/" 
   
    target="_blank" rel="noreferrer noopener" 
-><img src="/images/roses1.jpg" alt="banner"></a></p>
-<h2 id="usage">Usage<a class="anchor" href="#usage">#</a></h2>
-<ul>
-<li>install PIL: <code>pip install pillow</code></li>
-<li>run the script</li>
-<li>images will be output to <code>./out</code></li>
-</ul>
-<h2 id="examples">Examples<a class="anchor" href="#examples">#</a></h2>
-<p><img src="https://media.discordapp.net/attachments/1028558749968900108/1047895862350729226/psps3.jpeg" alt="kitty cat"><img src="https://media.discordapp.net/attachments/1028558749968900108/1047895652866199613/0.jpeg" alt="kitty cat in the MATRIX"></p>
-<p>supports different quality outputs:
-<img src="https://pbs.twimg.com/media/Fi1pqewUoAAKzW-?format=jpg&amp;name=medium" alt="low quality R34">
-<img src="https://pbs.twimg.com/media/Fi1p3QfUAAAcSL9?format=jpg&amp;name=large" alt="higher quality R34"></p>
+><img src="/images/ripples.jpg" alt="banner"></a></p>
+<h1 id="ripples">Ripples</h1>
+<h2 id="live-demo">Live Demo<a class="anchor" href="#live-demo">#</a></h2>
+<p>Check out <a href="http://sammi.sh" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>sammi.sh</a>. This also functions as my creative project website, and will be updated occasionally.</p>
 <h2 id="motivations">Motivations<a class="anchor" href="#motivations">#</a></h2>
-<p>A few years ago, I found out about <a href="https://www.a1k0n.net/2011/07/20/donut-math.html" 
+<p>I&rsquo;m still obsessed with ASCII art and textmode, but recently I&rsquo;ve been wanting to learn a bit more about procedural content. I&rsquo;ve been looking into simple procedural animations with inverse kinematics for an independent game project, and thought I&rsquo;d showcase some of that over on my creative project website.</p>
+<p>There&rsquo;s an animation where ripples spread across the screen, and a fish made of ASCII characters. The fish has two modes. It can either follow your cursor (with a red <code>◓</code> character showing the cursor&rsquo;s position and creating ripples) or move towards random points on the grid, toggling between modes when you click. I wrote prototypes in python, then converted it to JavaScript to make it accessible online and for better performance.</p>
+<h2 id="notes">Notes<a class="anchor" href="#notes">#</a></h2>
+<p>The canvas is split into a grid, with each cell displaying an ASCII character. This setup ensures everything lines up neatly. Clicking generates ripples that radiate outwards. I calculate the wave amplitudes at each grid point using cosine functions, then map those values to different ASCII characters to create the visual effect. The fish is composed of multiple spheres that follow each other with a fixed distance, calculated independent of mouse movement (this would result in the segments detaching when the mouse moves quickly). The sizes of the segments increase to a midpoint and then decrease to make it a bit more fish-like, rather than a snake.</p>
+<h2 id="future">Future<a class="anchor" href="#future">#</a></h2>
+<ul>
+<li>Showing off my links on the website (like a school of fish swimming around them)</li>
+<li>Mobile optimizations (touch controls, scaling limits)</li>
+<li>More complex animations (like a school of fish with flocking behavior)</li>
+<li>Ascii shader with 3d model rendering for catching fish, this is a separate project I&rsquo;m working on</li>
+</ul>
+<h2 id="acknowledgements">Acknowledgements<a class="anchor" href="#acknowledgements">#</a></h2>
+<p><a href="https://www.youtube.com/watch?v=qlfh_rv6khY" 
   
    target="_blank" rel="noreferrer noopener" 
->donut.c</a> which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.</p>
-<p>Recently, reminded of this, I wrote a script to automatically convert images to similar kinds of art.</p>
-<h2 id="notes">Notes<a class="anchor" href="#notes">#</a></h2>
-<p>I do not output the values as .txt files or output text to the terminal, since that doesn&rsquo;t support colors (which I, personally, wanted). One potential option is outputting it as HTML which can then be embedded, but that&rsquo;s a bit tedious. Maybe some day.</p>
-<p>I used pillow to output to an image instead. In a sense this is pseudo-ascii, you have no access to the actual text that&rsquo;s generated.</p>
-<p>How it works: chunks of differing n*n pixels (depending on size choice) get their average brightness mapped to a certain ASCII character.</p>
-<p>I use this character set, but it&rsquo;s easy enough to change: <code>$@B%8&amp;WM#*oahkbdpqwmZO0QLCJUYXzcvunxrjft/\|()1{}[]?-_+~&lt;&gt;i!lI;:,\&quot;^`'.</code><br>donut.c only uses <code>.,-~:;=!*#$@</code>!</p>
-<p>This can potentially generate massive images (when you approach n=1) so default parameters sacrifice details on larger scales to control output size.</p>
-<h2 id="acknowledgements">Acknowledgements<a class="anchor" href="#acknowledgements">#</a></h2>
-<p>Thank you to Andy Sloane and Pushkara Sharma.</p>
+>A simple procedural animation technique</a>
+<a href="https://www.shadertoy.com/view/ldBXDD" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>RippleEffectFragmentShader</a></p>
 
 
               
@@ -153,12 +155,12 @@
 
  <div class="pagination">
   
-
-  
     <a class="pagination__item" href="https://smaran-m.github.io/projects/gridshade/">
-      <span class="pagination__label">Next Post</span>
-      <span class="pagination__title" >Maptisse: A Tilemap Generator</span>
+        <span class="pagination__label">Previous Post</span>
+        <span class="pagination__title">Maptisse: A Tilemap Generator</span>
     </a>
+  
+
   
 </div>
 

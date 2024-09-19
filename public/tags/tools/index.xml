@@ -14,7 +14,7 @@
       <pubDate>Wed, 13 Sep 2023 14:20:09 -0400</pubDate>
       
       <guid>https://smaran-m.github.io/projects/gridshade/</guid>
-      <description>Usage  build with dotnet build run with dotnet run click and drag to fill in squares select tileset with dropdown menu generate!  Features  doodle around and generate tilemaps that work great for games and TTRPGs generates almost instantaneously, make quick changes on the fly save and load grid states as JSON files edit tileset at will in any image editor of your choice (resources/tilesets/)  Motivations So I played around with a fully automated evolution sim in python back in high-school, but never got past the stage of procedurally generated levels.</description>
+      <description>Usage  build with dotnet build run with dotnet run click and drag to fill in squares select tileset with dropdown menu generate!  Features  doodle around and generate tilemaps that work great for games and TTRPGs generates almost instantaneously, make quick changes on the fly save and load grid states as JSON files edit tileset at will in any image editor of your choice (resources/tilesets/)  Motivations So I played around with an evolution sim in python back in high-school, but never got past the stage of procedurally generated levels.</description>
     </item>
     
   </channel>

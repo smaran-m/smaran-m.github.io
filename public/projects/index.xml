@@ -7,14 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
-    <lastBuildDate>Wed, 13 Sep 2023 14:20:09 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Sep 2024 16:31:19 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Ripples</title>
+      <link>https://smaran-m.github.io/projects/ripples/</link>
+      <pubDate>Thu, 19 Sep 2024 16:31:19 -0400</pubDate>
+      
+      <guid>https://smaran-m.github.io/projects/ripples/</guid>
+      <description>Ripples Live Demo Check out sammi.sh. This also functions as my creative project website, and will be updated occasionally.
+Motivations I&amp;rsquo;m still obsessed with ASCII art and textmode, but recently I&amp;rsquo;ve been wanting to learn a bit more about procedural content. I&amp;rsquo;ve been looking into simple procedural animations with inverse kinematics for an independent game project, and thought I&amp;rsquo;d showcase some of that over on my creative project website.</description>
+    </item>
+    
     <item>
       <title>Maptisse: A Tilemap Generator</title>
       <link>https://smaran-m.github.io/projects/gridshade/</link>
       <pubDate>Wed, 13 Sep 2023 14:20:09 -0400</pubDate>
       
       <guid>https://smaran-m.github.io/projects/gridshade/</guid>
-      <description>Usage  build with dotnet build run with dotnet run click and drag to fill in squares select tileset with dropdown menu generate!  Features  doodle around and generate tilemaps that work great for games and TTRPGs generates almost instantaneously, make quick changes on the fly save and load grid states as JSON files edit tileset at will in any image editor of your choice (resources/tilesets/)  Motivations So I played around with a fully automated evolution sim in python back in high-school, but never got past the stage of procedurally generated levels.</description>
+      <description>Usage  build with dotnet build run with dotnet run click and drag to fill in squares select tileset with dropdown menu generate!  Features  doodle around and generate tilemaps that work great for games and TTRPGs generates almost instantaneously, make quick changes on the fly save and load grid states as JSON files edit tileset at will in any image editor of your choice (resources/tilesets/)  Motivations So I played around with an evolution sim in python back in high-school, but never got past the stage of procedurally generated levels.</description>
     </item>
     
     <item>
