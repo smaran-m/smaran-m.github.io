@@ -10,9 +10,9 @@ math: false
 toc: false
 ---
 # my name is <span style="color:#ffa07a">Smaran</span>.
-I am a fourth-year computer science student based in Atlanta, GA 🐝. I have a variety of interests that will hopefully be evident when I get around to writing blog posts.
+I am a first-year MSCS student based in Atlanta, GA 🐝. I have a variety of interests that will hopefully be evident when I get around to writing blog posts.
 
-you can look at my art with your eye(s) [here](https://instagram.com/immol8r)<br>
+you can look at my creative projects with your eye(s) [here](https://sammi.sh)<br>
 you can look at my code with your computer(s) [here](https://github.com/smaran-m)
 
 hire me! [my resume](/docs/SmaranMishraResume.pdf).

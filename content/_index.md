@@ -1,5 +1,5 @@
 ---
 heading: "welcome"
-#subheading: "thank you for stopping by"
-handle: "smaran_"
+#subheading: "also check out sammi.sh!"
+#handle: "smaran_"
 ---
