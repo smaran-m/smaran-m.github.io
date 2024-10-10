@@ -10,18 +10,17 @@ math: false
 toc: false
 ---
 # my name is <span style="color:#ffa07a">Smaran</span>.
-I am a first-year MSCS student based in Atlanta, GA 🐝. I have a variety of interests that will hopefully be evident when I get around to writing blog posts.
+I am a first-year MSCS student based in Atlanta, GA 🐝. I like making well designed technology to help people work and feel better. While my specialization is in systems and multimedia, I also like working on tools and testing - I ESPECIALLY like when these areas mix.
 
-you can look at my creative projects with your eye(s) [here](https://sammi.sh)<br>
-you can look at my code with your computer(s) [here](https://github.com/smaran-m)
-
+browse my code! [my github](https://github.com/smaran-m)<br>
+look at my art! [my portfolio](https://sammi.sh)<br>
 hire me! [my resume](/docs/SmaranMishraResume.pdf).
 
 # this is my website.
 there are many like it, but this one is mine.
 
 it was designed to be quick and concise. most text is lowercase just because i prefer it that way.
-i built it myself, with a little help from my friend [hugo](https://gohugo.io/)
+i built it with a little help from my friend [hugo](https://gohugo.io/)
 
 enjoy your stay ♡
 

@@ -13,8 +13,6 @@ tags: [graphics]
 - images will be output to `./out`
 
 ## Examples
-![kitty cat](https://media.discordapp.net/attachments/1028558749968900108/1047895862350729226/psps3.jpeg)![kitty cat in the MATRIX](https://media.discordapp.net/attachments/1028558749968900108/1047895652866199613/0.jpeg)
-
 supports different quality outputs:
 ![low quality R34](https://pbs.twimg.com/media/Fi1pqewUoAAKzW-?format=jpg&name=medium)
 ![higher quality R34](https://pbs.twimg.com/media/Fi1p3QfUAAAcSL9?format=jpg&name=large)

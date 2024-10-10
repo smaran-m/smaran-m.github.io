@@ -78,3 +78,9 @@ copyright = "© 2023"
   name = "projects"
   title = "Projects"
   url = "/projects"
+
+[[menu.main]]
+  identifier = "portfolio"
+  name = "portfolio"
+  title = "Portfolio"
+  url = "https://sammi.sh"
