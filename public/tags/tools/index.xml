@@ -1,21 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>tools on realm</title>
+    <title>Tools on realm</title>
     <link>https://smaran-m.github.io/tags/tools/</link>
-    <description>Recent content in tools on realm</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in Tools on realm</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
-    <lastBuildDate>Wed, 13 Sep 2023 14:20:09 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 13 Sep 2023 14:20:09 -0400</lastBuildDate>
+    <atom:link href="https://smaran-m.github.io/tags/tools/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Maptisse: A Tilemap Generator</title>
       <link>https://smaran-m.github.io/projects/gridshade/</link>
       <pubDate>Wed, 13 Sep 2023 14:20:09 -0400</pubDate>
-      
       <guid>https://smaran-m.github.io/projects/gridshade/</guid>
-      <description>Usage  build with dotnet build run with dotnet run click and drag to fill in squares select tileset with dropdown menu generate!  Features  doodle around and generate tilemaps that work great for games and TTRPGs generates almost instantaneously, make quick changes on the fly save and load grid states as JSON files edit tileset at will in any image editor of your choice (resources/tilesets/)  Motivations So I played around with an evolution sim in python back in high-school, but never got past the stage of procedurally generated levels.</description>
+      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/smaran-m/GridShadingApp/&#34;&gt;&lt;img src=&#34;https://smaran-m.github.io/images/maptisse-banner.png&#34; alt=&#34;banner&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;build with &lt;code&gt;dotnet build&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;run with &lt;code&gt;dotnet run&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;click and drag to fill in squares&lt;/li&gt;&#xA;&lt;li&gt;select tileset with dropdown menu&lt;/li&gt;&#xA;&lt;li&gt;generate!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;doodle around and generate tilemaps that work great for games and TTRPGs&lt;/li&gt;&#xA;&lt;li&gt;generates almost instantaneously, make quick changes on the fly&lt;/li&gt;&#xA;&lt;li&gt;save and load grid states as JSON files&lt;/li&gt;&#xA;&lt;li&gt;edit tileset at will in any image editor of your choice (resources/tilesets/)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;&#xA;&lt;p&gt;So I played around with an evolution sim in python back in high-school, but never got past the stage of procedurally generated levels. This is before I ever knew about Conway&amp;rsquo;s game of life, I had just seen a couple simulations that were built upon the principles of having food spawn and some kind of population that would eat it.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

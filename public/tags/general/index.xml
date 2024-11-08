@@ -1,25 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>general on realm</title>
+    <title>General on realm</title>
     <link>https://smaran-m.github.io/tags/general/</link>
-    <description>Recent content in general on realm</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content in General on realm</description>
+    <generator>Hugo</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
-    <lastBuildDate>Fri, 27 May 2022 13:47:39 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/tags/general/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 27 May 2022 13:47:39 -0400</lastBuildDate>
+    <atom:link href="https://smaran-m.github.io/tags/general/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>hello!</title>
       <link>https://smaran-m.github.io/blog/hello/</link>
       <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
-      
       <guid>https://smaran-m.github.io/blog/hello/</guid>
-      <description>my name is Smaran. I am a first-year MSCS student based in Atlanta, GA 🐝. I like making well designed technology to help people work and feel better. While my specialization is in systems and multimedia, I also like working on tools and testing - I ESPECIALLY like when these areas mix.
-browse my code! my github
-look at my art! my portfolio
-hire me! my resume.
-this is my website.</description>
+      <description>&lt;h1 id=&#34;my-name-is-span-stylecolorffa07asmaranspan&#34;&gt;my name is &lt;span style=&#34;color:#ffa07a&#34;&gt;Smaran&lt;/span&gt;.&lt;/h1&gt;&#xA;&lt;p&gt;I am a first-year MSCS student based in Atlanta, GA 🐝. I like making well designed technology to help people work and feel better. While my specialization is in systems and multimedia, I also like working on tools and testing - I ESPECIALLY like when these areas mix.&lt;/p&gt;&#xA;&lt;p&gt;browse my code! &lt;a href=&#34;https://github.com/smaran-m&#34;&gt;my github&lt;/a&gt;&lt;br&gt;&#xA;look at my art! &lt;a href=&#34;https://sammi.sh&#34;&gt;my portfolio&lt;/a&gt;&lt;br&gt;&#xA;hire me! &lt;a href=&#34;https://smaran-m.github.io/docs/SmaranMishraResume.pdf&#34;&gt;my resume&lt;/a&gt;.&lt;/p&gt;&#xA;&lt;h1 id=&#34;this-is-my-website&#34;&gt;this is my website.&lt;/h1&gt;&#xA;&lt;p&gt;there are many like it, but this one is mine.&lt;/p&gt;</description>
     </item>
-    
   </channel>
 </rss>

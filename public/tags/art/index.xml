@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Art on realm</title>
+    <link>http://localhost:1313/tags/art/</link>
+    <description>Recent content in Art on realm</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <copyright>© 2023</copyright>
+    <lastBuildDate>Tue, 08 Oct 2024 11:29:32 -0400</lastBuildDate>
+    <atom:link href="http://localhost:1313/tags/art/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>art, in the end</title>
+      <link>http://localhost:1313/blog/ai_art/</link>
+      <pubDate>Tue, 08 Oct 2024 11:29:32 -0400</pubDate>
+      <guid>http://localhost:1313/blog/ai_art/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/artai/bait.png&#34; alt=&#34;banner&#34;&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;foreword&#34;&gt;foreword&lt;/h3&gt;&#xA;&lt;p&gt;ai is a mosquito. it&amp;rsquo;s something i&amp;rsquo;ve made a conscious effort to stay away from as &lt;del&gt;a software engineer&lt;/del&gt; someone who codes, but it feels impossible to avoid. i&amp;rsquo;m conflicted, but my views on ai as a whole isn&amp;rsquo;t something i&amp;rsquo;m going to get into here. it&amp;rsquo;s too early. today, i&amp;rsquo;m going to try approaching ai as an artist first, engineer second. a lot of what is discussed here isn&amp;rsquo;t new to a lot of you.&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>
