@@ -4,38 +4,45 @@
     <title>Tags on realm</title>
     <link>https://smaran-m.github.io/tags/</link>
     <description>Recent content in Tags on realm</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
-    <lastBuildDate>Thu, 19 Sep 2024 16:31:19 -0400</lastBuildDate>
-    <atom:link href="https://smaran-m.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 19 Sep 2024 16:31:19 -0400</lastBuildDate><atom:link href="https://smaran-m.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Graphics</title>
+      <title>graphics</title>
       <link>https://smaran-m.github.io/tags/graphics/</link>
       <pubDate>Thu, 19 Sep 2024 16:31:19 -0400</pubDate>
+      
       <guid>https://smaran-m.github.io/tags/graphics/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>Tools</title>
+      <title>tools</title>
       <link>https://smaran-m.github.io/tags/tools/</link>
       <pubDate>Wed, 13 Sep 2023 14:20:09 -0400</pubDate>
+      
       <guid>https://smaran-m.github.io/tags/tools/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>About-Me</title>
+      <title>about-me</title>
       <link>https://smaran-m.github.io/tags/about-me/</link>
       <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
+      
       <guid>https://smaran-m.github.io/tags/about-me/</guid>
       <description></description>
     </item>
+    
     <item>
-      <title>General</title>
+      <title>general</title>
       <link>https://smaran-m.github.io/tags/general/</link>
       <pubDate>Fri, 27 May 2022 13:47:39 -0400</pubDate>
+      
       <guid>https://smaran-m.github.io/tags/general/</guid>
       <description></description>
     </item>
+    
   </channel>
 </rss>

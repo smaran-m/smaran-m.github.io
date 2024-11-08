@@ -4,38 +4,48 @@
     <title>Projects on realm</title>
     <link>https://smaran-m.github.io/projects/</link>
     <description>Recent content in Projects on realm</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© 2023</copyright>
-    <lastBuildDate>Fri, 08 Nov 2024 03:27:55 -0500</lastBuildDate>
-    <atom:link href="https://smaran-m.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 08 Nov 2024 03:27:55 -0500</lastBuildDate><atom:link href="https://smaran-m.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Dungeoncrawler</title>
       <link>https://smaran-m.github.io/projects/dungeoncrawler/</link>
       <pubDate>Fri, 08 Nov 2024 03:27:55 -0500</pubDate>
+      
       <guid>https://smaran-m.github.io/projects/dungeoncrawler/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/smaran-m/dungeoncrawler/&#34;&gt;&lt;img src=&#34;https://i.imgur.com/E3Wtcq8.png&#34; alt=&#34;banner&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;img src=&#34;https://i.imgur.com/5jpZQ5j.gif&#34; alt=&#34;gameplay&#34;&gt;&#xA;Dunjin (working title) is a WIP multiplayer platform fighter using Godot ver 3.5.3. The game is currently in a prototype state.&lt;/p&gt;&#xA;&lt;h2 id=&#34;motivation&#34;&gt;Motivation&lt;/h2&gt;&#xA;&lt;p&gt;I wanted to make the TTRPG combat experience more enjoyable, using medieval themes but a real time battle system that allows for a high skill ceiling. I&amp;rsquo;m using a smash archetype for the character controller, but plan to have this as both a single-player and multiplayer game. This is currently a solo project: I did all the art and code, but the parallax background behind the windows was sourced from &lt;a href=&#34;https://brullov.itch.io/oak-woods&#34;&gt;here&lt;/a&gt;.&lt;/p&gt;</description>
+      <description>Dunjin (working title) is a WIP multiplayer platform fighter using Godot ver 3.5.3. The game is currently in a prototype state.
+Motivation I wanted to make the TTRPG combat experience more enjoyable, using medieval themes but a real time battle system that allows for a high skill ceiling. I&amp;rsquo;m using a smash archetype for the character controller, but plan to have this as both a single-player and multiplayer game. This is currently a solo project: I did all the art and code, but the parallax background behind the windows was sourced from here.</description>
     </item>
+    
     <item>
       <title>Ripples</title>
       <link>https://smaran-m.github.io/projects/ripples/</link>
       <pubDate>Thu, 19 Sep 2024 16:31:19 -0400</pubDate>
+      
       <guid>https://smaran-m.github.io/projects/ripples/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/smaran-m/ascii-ripples/&#34;&gt;&lt;img src=&#34;https://smaran-m.github.io/images/ripples.jpg&#34; alt=&#34;banner&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;ripples&#34;&gt;Ripples&lt;/h1&gt;&#xA;&lt;h2 id=&#34;live-demo&#34;&gt;Live Demo&lt;/h2&gt;&#xA;&lt;p&gt;Check out &lt;a href=&#34;http://sammi.sh&#34;&gt;sammi.sh&lt;/a&gt;. This also functions as my creative project website, and will be updated occasionally.&lt;/p&gt;&#xA;&lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;&#xA;&lt;p&gt;I&amp;rsquo;m still obsessed with ASCII art and textmode, but recently I&amp;rsquo;ve been wanting to learn a bit more about procedural content. I&amp;rsquo;ve been looking into simple procedural animations with inverse kinematics for an independent game project, and thought I&amp;rsquo;d showcase some of that over on my creative project website.&lt;/p&gt;&#xA;&lt;p&gt;There&amp;rsquo;s an animation where ripples spread across the screen, and a fish made of ASCII characters. The fish has two modes. It can either follow your cursor (with a red &lt;code&gt;◓&lt;/code&gt; character showing the cursor&amp;rsquo;s position and creating ripples) or move towards random points on the grid, toggling between modes when you click. I wrote prototypes in python, then converted it to JavaScript to make it accessible online and for better performance.&lt;/p&gt;</description>
+      <description>Ripples Live Demo Check out sammi.sh. This also functions as my creative project website, and will be updated occasionally.
+Motivations I&amp;rsquo;m still obsessed with ASCII art and textmode, but recently I&amp;rsquo;ve been wanting to learn a bit more about procedural content. I&amp;rsquo;ve been looking into simple procedural animations with inverse kinematics for an independent game project, and thought I&amp;rsquo;d showcase some of that over on my creative project website.</description>
     </item>
+    
     <item>
       <title>Maptisse: A Tilemap Generator</title>
       <link>https://smaran-m.github.io/projects/gridshade/</link>
       <pubDate>Wed, 13 Sep 2023 14:20:09 -0400</pubDate>
+      
       <guid>https://smaran-m.github.io/projects/gridshade/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/smaran-m/GridShadingApp/&#34;&gt;&lt;img src=&#34;https://smaran-m.github.io/images/maptisse-banner.png&#34; alt=&#34;banner&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;build with &lt;code&gt;dotnet build&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;run with &lt;code&gt;dotnet run&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;click and drag to fill in squares&lt;/li&gt;&#xA;&lt;li&gt;select tileset with dropdown menu&lt;/li&gt;&#xA;&lt;li&gt;generate!&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;features&#34;&gt;Features&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;doodle around and generate tilemaps that work great for games and TTRPGs&lt;/li&gt;&#xA;&lt;li&gt;generates almost instantaneously, make quick changes on the fly&lt;/li&gt;&#xA;&lt;li&gt;save and load grid states as JSON files&lt;/li&gt;&#xA;&lt;li&gt;edit tileset at will in any image editor of your choice (resources/tilesets/)&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;&#xA;&lt;p&gt;So I played around with an evolution sim in python back in high-school, but never got past the stage of procedurally generated levels. This is before I ever knew about Conway&amp;rsquo;s game of life, I had just seen a couple simulations that were built upon the principles of having food spawn and some kind of population that would eat it.&lt;/p&gt;</description>
+      <description>Usage  build with dotnet build run with dotnet run click and drag to fill in squares select tileset with dropdown menu generate!  Features  doodle around and generate tilemaps that work great for games and TTRPGs generates almost instantaneously, make quick changes on the fly save and load grid states as JSON files edit tileset at will in any image editor of your choice (resources/tilesets/)  Motivations So I played around with an evolution sim in python back in high-school, but never got past the stage of procedurally generated levels.</description>
     </item>
+    
     <item>
       <title>Image-to-ASCII</title>
       <link>https://smaran-m.github.io/projects/i2a/</link>
       <pubDate>Wed, 04 Jan 2023 23:25:02 +0400</pubDate>
+      
       <guid>https://smaran-m.github.io/projects/i2a/</guid>
-      <description>&lt;p&gt;&lt;a href=&#34;https://github.com/smaran-m/image-to-ascii&#34;&gt;&lt;img src=&#34;https://smaran-m.github.io/images/roses1.jpg&#34; alt=&#34;banner&#34;&gt;&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;usage&#34;&gt;Usage&lt;/h2&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;install PIL: &lt;code&gt;pip install pillow&lt;/code&gt;&lt;/li&gt;&#xA;&lt;li&gt;run the script&lt;/li&gt;&#xA;&lt;li&gt;images will be output to &lt;code&gt;./out&lt;/code&gt;&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;h2 id=&#34;examples&#34;&gt;Examples&lt;/h2&gt;&#xA;&lt;p&gt;supports different quality outputs:&#xA;&lt;img src=&#34;https://pbs.twimg.com/media/Fi1pqewUoAAKzW-?format=jpg&amp;amp;name=medium&#34; alt=&#34;low quality R34&#34;&gt;&#xA;&lt;img src=&#34;https://pbs.twimg.com/media/Fi1p3QfUAAAcSL9?format=jpg&amp;amp;name=large&#34; alt=&#34;higher quality R34&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;motivations&#34;&gt;Motivations&lt;/h2&gt;&#xA;&lt;p&gt;A few years ago, I found out about &lt;a href=&#34;https://www.a1k0n.net/2011/07/20/donut-math.html&#34;&gt;donut.c&lt;/a&gt; which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.&lt;/p&gt;&#xA;&lt;p&gt;Recently, reminded of this, I wrote a script to automatically convert images to similar kinds of art.&lt;/p&gt;</description>
+      <description>Usage  install PIL: pip install pillow run the script images will be output to ./out  Examples supports different quality outputs: Motivations A few years ago, I found out about donut.c which was equal parts artistry and wizardry to me. I really liked the look of it, growing up surrounded by ASCII art on obscure forums.
+Recently, reminded of this, I wrote a script to automatically convert images to similar kinds of art.</description>
     </item>
+    
   </channel>
 </rss>

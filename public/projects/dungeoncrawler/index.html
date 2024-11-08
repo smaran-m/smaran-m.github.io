@@ -2,12 +2,12 @@
 <html lang="en-us">
 
 <head>
-  <title>Ripples | realm</title>
+  <title>Dungeoncrawler | realm</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
   <meta name="description" content="">
-  <meta name="keywords" content="ascii , image-manipulation , python3 , python , pillow , PIL">
+  <meta name="keywords" content="Godot , GDScript , Games">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -15,7 +15,7 @@
   
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Ripples" />
+  <meta name="twitter:title" content="Dungeoncrawler" />
   <meta name="twitter:description" content=""/>
   <meta name="twitter:site" content="https://twitter.com/smaran_" />
   <meta name="twitter:creator" content="https://twitter.com/smaran_" />
@@ -50,8 +50,8 @@
     { 
       "@context": "http://schema.org", 
       "@type": "WebSite", 
-      "url": "https:\/\/smaran-m.github.io\/projects\/ripples\/",
-      "name": "Ripples",
+      "url": "https:\/\/smaran-m.github.io\/projects\/dungeoncrawler\/",
+      "name": "Dungeoncrawler",
       "author": {
         "@type": "Person",
         "name": ""
@@ -109,67 +109,84 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">Ripples</h1>
-            <time datetime="2024-09-19 16:31:19 -0400 EDT" class="post__date">Sep 19 2024</time> 
+            <h1 id="post__title">Dungeoncrawler</h1>
+            <time datetime="2024-11-08 03:27:55 -0500 EST" class="post__date">Nov 8 2024</time> 
           </header>
           <article class="post__content">
               
-<p><a href="https://github.com/smaran-m/ascii-ripples/" 
+<p><a href="https://github.com/smaran-m/dungeoncrawler/" 
   
    target="_blank" rel="noreferrer noopener" 
-><img src="/images/ripples.jpg" alt="banner"></a></p>
-<h1 id="ripples">Ripples</h1>
-<h2 id="live-demo">Live Demo<a class="anchor" href="#live-demo">#</a></h2>
-<p>Check out <a href="http://sammi.sh" 
+><img src="https://i.imgur.com/E3Wtcq8.png" alt="banner"></a></p>
+<p><img src="https://i.imgur.com/5jpZQ5j.gif" alt="gameplay"></p>
+<p>Dunjin (working title) is a WIP multiplayer platform fighter using Godot ver 3.5.3. The game is currently in a prototype state.</p>
+<h2 id="motivation">Motivation<a class="anchor" href="#motivation">#</a></h2>
+<p>I wanted to make the TTRPG combat experience more enjoyable, using medieval themes but a real time battle system that allows for a high skill ceiling. I&rsquo;m using a smash archetype for the character controller, but plan to have this as both a single-player and multiplayer game. This is currently a solo project: I did all the art and code, but the parallax background behind the windows was sourced from <a href="https://brullov.itch.io/oak-woods" 
   
    target="_blank" rel="noreferrer noopener" 
->sammi.sh</a>. This also functions as my creative project website, and will be updated occasionally.</p>
-<h2 id="motivations">Motivations<a class="anchor" href="#motivations">#</a></h2>
-<p>I&rsquo;m still obsessed with ASCII art and textmode, but recently I&rsquo;ve been wanting to learn a bit more about procedural content. I&rsquo;ve been looking into simple procedural animations with inverse kinematics for an independent game project, and thought I&rsquo;d showcase some of that over on my creative project website.</p>
-<p>There&rsquo;s an animation where ripples spread across the screen, and a fish made of ASCII characters. The fish has two modes. It can either follow your cursor (with a red <code>◓</code> character showing the cursor&rsquo;s position and creating ripples) or move towards random points on the grid, toggling between modes when you click. I wrote prototypes in python, then converted it to JavaScript to make it accessible online and for better performance.</p>
+>here</a>.</p>
 <h2 id="notes">Notes<a class="anchor" href="#notes">#</a></h2>
-<p>The canvas is split into a grid, with each cell displaying an ASCII character. This setup ensures everything lines up neatly. Clicking generates ripples that radiate outwards. I calculate the wave amplitudes at each grid point using cosine functions, then map those values to different ASCII characters to create the visual effect. The fish is composed of multiple spheres that follow each other with a fixed distance, calculated independent of mouse movement (this would result in the segments detaching when the mouse moves quickly). The sizes of the segments increase to a midpoint and then decrease to make it a bit more fish-like, rather than a snake.</p>
-<h2 id="future">Future<a class="anchor" href="#future">#</a></h2>
 <ul>
-<li>Showing off my links on the website (like a school of fish swimming around them)</li>
-<li>Mobile optimizations (touch controls, scaling limits)</li>
-<li>More complex animations (like a school of fish with flocking behavior)</li>
-<li>Ascii shader with 3d model rendering for catching fish, this is a separate project I&rsquo;m working on</li>
+<li>You can view the design document <a href="https://drive.google.com/file/d/1NdBgawc8S8PDr08acMxUb1v7S21OZg6O/view?usp=drive_link" 
+  
+   target="_blank" rel="noreferrer noopener" 
+>here</a>. There is a more extensive working document which I can provide on request.</li>
+<li>The current state of the project was intended for demo/testing at the November ATL Gamedevs meetup. It is still in a primitive, but playable state, with some of the more complex systems not implemented yet.</li>
+<li>Preliminary playtests brought a lot of feedback:
+<ul>
+<li>Hitboxes are somewhat disjointed</li>
+<li>Ledge mechanics are in an early state and will be revamped soon.</li>
+<li>L-cancelling will be added or landing lag will be eliminated entirely</li>
 </ul>
-<h2 id="acknowledgements">Acknowledgements<a class="anchor" href="#acknowledgements">#</a></h2>
-<p><a href="https://www.youtube.com/watch?v=qlfh_rv6khY" 
-  
-   target="_blank" rel="noreferrer noopener" 
->A simple procedural animation technique</a>
-<a href="https://www.shadertoy.com/view/ldBXDD" 
-  
-   target="_blank" rel="noreferrer noopener" 
->RippleEffectFragmentShader</a></p>
+</li>
+</ul>
+<h2 id="features">Features<a class="anchor" href="#features">#</a></h2>
+<ul>
+<li>All attacks and character interactions occur on a 60fps timescale as is genre standard</li>
+<li>Up to 4 player local multiplayer (engine limitation)</li>
+<li>Character controls inspired by Super Smash Brothers Melee
+<ul>
+<li>In-depth movement system with wavedashing, moonwalking etc</li>
+<li>Unique directional attack inputs which change depending on player state (tilts, aerials, etc.)</li>
+</ul>
+</li>
+<li>Instantly configurable character skins using Aseprite + Aseprite Wizard addon (not configured in-game yet)</li>
+<li>Multiplatform: works on Windows, Linux, MacOS</li>
+</ul>
+<h2 id="planned-additions">Planned additions<a class="anchor" href="#planned-additions">#</a></h2>
+<p>Vaguely ordered by priority</p>
+<ul>
+<li>Features
+<ul>
+<li>Sound</li>
+<li>Level and character selection</li>
+<li>More characters</li>
+<li>Roguelike segment</li>
+<li>Dynamic sprite additions</li>
+</ul>
+</li>
+<li>Systems
+<ul>
+<li>Stitched Wave Function Collapse based procedural level generation</li>
+<li>Online multiplayer with rollback netcode using Godot Rollback Netcode plugin</li>
+<li>Multithreaded matchmaking system</li>
+</ul>
+</li>
+</ul>
 
 
               
           </article>
           
 
-<ul class="tags__list">
-    
-    <li class="tag__item">
-        <a class="tag__link" href="https://smaran-m.github.io/tags/graphics/">graphics</a>
-    </li></ul>
-
  <div class="pagination">
   
-    <a class="pagination__item" href="https://smaran-m.github.io/projects/gridshade/">
+    <a class="pagination__item" href="https://smaran-m.github.io/projects/ripples/">
         <span class="pagination__label">Previous Post</span>
-        <span class="pagination__title">Maptisse: A Tilemap Generator</span>
+        <span class="pagination__title">Ripples</span>
     </a>
   
 
-  
-    <a class="pagination__item" href="https://smaran-m.github.io/projects/dungeoncrawler/">
-      <span class="pagination__label">Next Post</span>
-      <span class="pagination__title" >Dungeoncrawler</span>
-    </a>
   
 </div>
 

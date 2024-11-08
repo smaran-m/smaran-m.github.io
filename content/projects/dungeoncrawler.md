@@ -7,6 +7,7 @@ draft: false
 [![banner](https://i.imgur.com/E3Wtcq8.png)](https://github.com/smaran-m/dungeoncrawler/)
 
 ![gameplay](https://i.imgur.com/5jpZQ5j.gif)
+
 Dunjin (working title) is a WIP multiplayer platform fighter using Godot ver 3.5.3. The game is currently in a prototype state.
 
 ## Motivation

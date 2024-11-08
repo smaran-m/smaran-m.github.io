@@ -4,9 +4,8 @@
     <title>Categories on realm</title>
     <link>https://smaran-m.github.io/categories/</link>
     <description>Recent content in Categories on realm</description>
-    <generator>Hugo</generator>
+    <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>© 2023</copyright>
-    <atom:link href="https://smaran-m.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>© 2023</copyright><atom:link href="https://smaran-m.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
