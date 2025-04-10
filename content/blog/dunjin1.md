@@ -4,7 +4,7 @@ date: 2025-04-08T15:53:03-04:00
 slug: ""
 description: "DUNJIN DEVLOG #1"
 keywords: [gamedev, graphics, godot, indiegame]
-draft: true
+draft: false
 tags: [devlog]
 math: false
 toc: false
@@ -19,6 +19,8 @@ There's this idea of "fantasy" which only exists in the collective consciousness
 Unfortunately, for my twisted mind, these formats are much too slow. I dislike turn based games, and these games all feel way to restricted compared to what an ideal fight should look like - wizards bombarding fireballs from high above, knights parrying holy blades that make the ground reverberate with their force, that cool scene where you see someone power up for like a whole episode before blasting a hole in the moon. I want to do that. I want impact frames.
 
 So what game would let me do something like that? Really, the only thing with that sort of real-time decision making and emphasis on movement is a fighting game, more particularly, Smash Bros. That's how we got here, to my medieval fighting game project.
+
+![fighting art](/images/dunjin1/momentum.png)
 
 # Dunjin
 is a fighting game that plays into fantasy tropes, with a focus on gameplay. Honestly, all the stuff above was an overexaggeration. I just played D&D for the first time in a while and I was like "wow, combat suuuuucks". Then I watched a Smash Ultimate match and was like "dang there are so many swordies this suuuuucks. What if it was all swordies. Wait."
@@ -35,6 +37,8 @@ Currently, the only character is the Knight, with a couple others in the works. 
 
 I'm aiming for somewhere around 6 characters on release, since animating each character is quite a bit of work, but haven't decided on all 6. I might throw in some clones too, since those are easier to pump out with some of the tools I've made.
 
+![knight concept](/images/dunjin1/knight-croquis.jpg)
+
 ## Themes
 Medieval/JRPG fighting game has actually been done before, like in [Battle Fantasia](https://www.youtube.com/watch?v=hbXkcEZhflA). That's not the extent of my gimmick. My gimmick has far wider implications and is embedded in the very mechanics of the game. My gimmick is a feature.
 
@@ -49,15 +53,15 @@ The Knight has a set of 3 types of attacks, normals, specials, aerials - which a
 
 Specials are a little more interesting, but still ultimately basic. They're similar ot normal attacks, but they either have more knockback, or add momentum to the player for traversal. I haven't done any more interesting specials yet, but they'll come with other characters. There's 1 protectile attack, the neutral special, which doesn't do any knockback, and acts more like a fox laser.
 
-### Grabs/Throws
-Grabs and throws are in, but pummels are not. I just didn't animate it, and dont think it's super readable at the sprite scale we're working with. That said, throws just work by putting out a small hitbox that does the relevant knockback as if it was a normal attack, and it scales a lot less with damage.
-
 ### Defensive options
 The Knight has a shield, which is a little different from smash. It has a fixed size, does not drain on hit, and is not directional, but it does have a parry mechanic. There is a 4-frame window at the start of shield where you can parry an attack, putting the enemy in a 60 frame stun. Parrying also reflects projectiles, like powershielding. Which leads to fun games of dodgeball.
 
 Shields automatically drop after 5 seconds, and you can roll out of shield, with a decent bit of endlag. The shield system as a whole is another major target for improvement, as I want to add shield health and shield breaks. I want there to be a risk/reward system for shielding, and maybe be able to balance it for individual characters - so less shield health for a weaker character or something similar. The details aren't ironed out yet, but I'm planning on taking more inspo from D&D, so something like Armor Classes, where you don't fully nullify attacks but just take a percentage of the original damage based on your AC.
 
 Crouching is in, but it doesn't do anything yet. I want to add crouch cancelling, but I honestly don't know what it entails that well. I'm just going to mess with knockback values in the hitbox class and see what works.
+
+### Grabs/Throws
+Grabs and throws are in, but pummels are not. I just didn't animate it, and dont think it's super readable at the sprite scale we're working with. That said, throws just work by putting out a small hitbox that does the relevant knockback as if it was a normal attack, and it scales a lot less with damage. They're solid combo starters, and generally a decent option especially since shields don't drain right now.
 
 ### Hitboxes
 Hitboxes are a massive area for improvement at the moment, as I currently only have 1 rectangular hurt and collision box for the character, and the hitboxes are all rectangles. Also, hitboxes do not currently take rotation as an argument, which means on any diagonal motion, you get a huge disjoint. While I can instantiate multiple square hitboxes to approximate a given attack, this really is not the ideal solution, and I'm going to try improving this to allow for different collision shapes.
@@ -76,10 +80,12 @@ One such example of changes I made compared to base smash is fixed 4-frame landi
 - airdodges/rolls
 - moonwalking
 
-Most of the basics are in but some of the movement-related systems aren't in yet, like shield dropping, wall jumps, techs and ledgedashes (among others). In general, ledge states are kinda jank at the moment, and I'm trying to figure out a better system for it.
+Most of the basics from Smash are in but some of the movement-related systems aren't in yet, like shield dropping, wall jumps, techs and ledgedashes (among others). In general, ledge states are kinda jank at the moment, and I'm trying to figure out a better system for it. Platforms are also not seamless, as you can't just pass through a platform if you're holding down, and you have to press down to drop through after landing. This is just how Godot's 1-way platforms work, so I think I'll just disable collision masks with platforms while down is pressed.
 
 ## Game Loop
-You may notice that, so far, this is just a description of local multiplayer. I intend to have single player segments, inspired somewhat by smash singleplayer, and online multiplayer. I really want it to stand on its own as a single player game, like with how people still enjoy surfing in CSGO, and that'll be by creating fundamental gameplay systems that work for people.
+You may notice that, so far, this is just local multiplayer. I intend to have single player segments, inspired somewhat by smash singleplayer, and online multiplayer. I really want it to stand on its own as a single player game, like with how people still enjoy surfing in CSGO, and that'll be by creating fundamental gameplay systems that work for people.
+
+For the multiplayer, I don't plan to have it be the same as Smash. I was planning on having multiple win conditions, something which was tested in Rushdown Revolt a little bit with their last hit mechanic, but I'm looking for something different. I like the speed of Melee, but I am not trying to make a Melee clone in the long run, but that's kind of what it's like right now.
 
 I personally think my plans for integrating the two are pretty cool, but I don't want to spoil it too much. Keep an eye out.
 
@@ -88,7 +94,9 @@ I personally think my plans for integrating the two are pretty cool, but I don't
 I initially animated everything with a fixed 100ms frame duration in Aseprite, but this was way too slow for fighting game timings, since that means each frame is equal to roughly 6 frames in engine at 60fps. That said, animating at actual 60fps (17ms between frames) is way too much work and it also looks too fluid for pixel art, so I'm working with a variable fps, with anywhere from 33-100ms frame timings depending on the animation. A lot of animations have more frames on startup than during endlag, so they come out quick, and linger for a while. I've had to delete some frames in order to make attacks come out fast enough, etc. As you can imagine, this is hell to manage in-engine, but it's good, honest work. In total, the Knight character has 242 frames of animation, and I envision this rising to 300 with all the nice-to-haves (like distinct throws and dodges).
 
 ## Graphics Pipeline
-This is one of the things I'm happiest for the current state of the game, and it's how I'm getting the blended 2d-3d look. A lot of the work has been done already, and I just had to put everything together to get the look I wanted. You could argue that graphics starts with the sprites, but all the sprites are flat colors, and unshaded. One funny note is that I hadn't at all thought about palettes when starting out and just used the default dawnbreaker 32 palette inside Aseprite, which is more saturated than I wanted things to be. This is what the game looks like in its base state.
+This is one of the things I'm happiest for the current state of the game, and it's how I'm getting the blended 2d-3d look. A lot of the work has been done already, and I just had to put everything together to get the look I wanted. You could argue that graphics starts with the sprites, but all the sprites are flat colors, and unshaded. This is what the game looks like in its base state.
+
+![base](/images/dunjin1/platforms.png)
 
 The pipeline is as follows:
 ### Automatic Normal map generation
@@ -98,14 +106,14 @@ Processed in Aseprite and Krita using [this post](https://www.reddit.com/r/godot
 
 ### Lighting In-Engine
 ![normals](/images/dunjin1/normal-engine.png)
+Using Godot's built-in lighting system, going for soft lighting mostly.
 
 ### Palette Remapping Shader
 ![normals](/images/dunjin1/palettes.png)
 
+The effect here's a little more visible with different colored lighting: there are fewer green shades in the palette so it appears a little flatter in green light. I can change the number of colors and palette texture in the shader, it uses a 1xN texture that Lospec exports natively. It's not performant at the moment, but neither is the CRT shader, and I'll figure both out later.
 
 ![palettes](/images/dunjin1/palette-lighting.gif)
-
-The effect here's a little more visible with different colored lighting: there are fewer green shades in the palette so it appears a little flatter in green light. I can change the number of colors and palette texture in the shader, it uses a 1xN texture that Lospec exports natively. It's not performant at the moment, but neither is the CRT shader, and I'll figure both out later.
 
 ```
 shader_type canvas_item;
@@ -149,20 +157,20 @@ void fragment() {
 ### CRT Shader
 ![normals](/images/dunjin1/crts.png)
 
-I should add that this looks a little different on my own monitor, a little closer to a sub-pixel dither effect. I'm not show how this looks on other settings, but for my purposes, I quite like it. It'll be off by default.
+I should add that this looks a little different on my own monitor, a little closer to a sub-pixel dither effect. I'm not sure how this looks on other settings, but for my purposes, I quite like it. It'll be off by default.
 
 ![normals](/images/dunjin1/crt-irl.jpg)
 
 I got the shader [here](https://godotshaders.com/shader/crt-shader-with-realistic-blurring/).
 
 
-## Audio
-### SFX
+# Audio
+## SFX
 The audio system and manager is there, but it's mostly using placeholders right now. I don't want to commit too hard to the bitcrushed audio sound, but I probably will have a slight effect on the bus. Currently, I think damage in particular is grating, but I'm in the process of finding better sounds. Admittedly, audio is one of my weaker points, and I haven't worked on audio systems enough to know about the magic that audio engineering entails.
 
 Each character currently only has voice sfx on specials, grabs, and taunts. I'm undecided on voice acting, and frankly don't think I'll have full VA. I think there's a charm to basic grunts with each dialong bos to indicate tone, or a beep noise on every letter like in classic JRPGs. Animal-crossing style phonetic sounds are also in fashion right now, but they don't feel authentic to what I'm doing.
 
-### Music
+## Music
 I've worked on some songs for the soundtrack, but haven't really been happy with any of them except the main menu theme. It interpolates a sweet trip song. Here's the inspo:
 <br>
 
@@ -177,17 +185,27 @@ Touhou Hisouten is the 10.5th (?) installment in the Touhou Franchise, and the 2
 
 [![Azakeri no Yuugi](https://img.youtube.com/vi/5uW76nWl7uQ/0.jpg)](https://www.youtube.com/watch?v=5uW76nWl7uQ)
 
-
 Anyways, I'm just gonna try copy him. The music I've made will be up when it's ready, but I'm open to letting others handle soundtrack since I am by no means good at it.
 
 ## Tools
 A lot of the work I've been doing has been in making tools that allow for the creation of skins, characters, and swaps easier.
 
-### Palette Swapping
-
 ### Animation setup in Aseprite
+So, having no previous experience, I wasn't sure how to set things up initally. This is what ended up working for me:
+![aseprite structure](/images/dunjin1/aseprite-org.png)
 
+- Each relevant body part on its own layer, sometimes multiple layers when a body part moves above and below. This will make later additions a LOT easier.
+- For a 64x64px character, a 128x128px canvas to allow for stretching and lunging etc. The biggest example is in a stomp animation, where the sword is pointing upwards, and the legs are fully extended.
+- All animations tagged as part of the same file, with sub-sections tagged
+- Optional: Lospec palette importer because I like playing with palettes in the editor first. I animated everything with the default DawnBringer 32 palette.
+- AsepriteWizard to export directly from Aseprite to Godot. This ended up being unnecessary later on as I started using CanvasTextures, which aren't yet supported by the plugin, but that's supposedly a planned feature.
+
+I did none of these things at first, and ended up spending a month or so just cleaning up animations.
 ### Batch Editing Script
+
+![batch editing](/images/dunjin1/batchedit.gif)
+
+Since we have body parts on their own layer, this means we can search for similarities in a given body part on it's own layer. In this example I did in 5-10 minutes, for a 242 frame animation, only 33 frames were edited. I'm still working on it, but it'll be up when it's done.
 
 
 # Clairvoyance
@@ -201,9 +219,11 @@ The godot input system leaves a lot to be desired.
 - Input remapping
 - Macros
 
+I'm going to manually rework it, which I was probably going to need to do anyways for online.
+
 ## Planned roadmap
 - 1 more character
-- Gameplay changes
+- Gameplay changes (make it not just Smash Bros)
 - Rollback Networking using GodotSteam and Delta
 - Singleplayer
 
