@@ -2,11 +2,11 @@
 <html lang="en-us">
 
 <head>
-  <title>Making a Smash Clone | realm</title>
+  <title>Dunjin Devlog #1 | realm</title>
 
   <meta charset="UTF-8">
   <meta name="language" content="en">
-  <meta name="description" content="DUNJIN DEVLOG #1">
+  <meta name="description" content="The Making of a Smash Clone">
   <meta name="keywords" content="gamedev , graphics , godot , indiegame">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
@@ -15,8 +15,8 @@
   
   
   <meta name="twitter:card" content="summary" />
-  <meta name="twitter:title" content="Making a Smash Clone" />
-  <meta name="twitter:description" content="DUNJIN DEVLOG #1"/>
+  <meta name="twitter:title" content="Dunjin Devlog #1" />
+  <meta name="twitter:description" content="The Making of a Smash Clone"/>
   <meta name="twitter:site" content="https://twitter.com/smaran_" />
   <meta name="twitter:creator" content="https://twitter.com/smaran_" />
   
@@ -55,9 +55,9 @@
             "@id": "https:\/\/smaran-m.github.io\/"
       },
       "articleSection" : "blog",
-      "name" : "Making a Smash Clone",
-      "headline" : "Making a Smash Clone",
-      "description" : "DUNJIN DEVLOG #1",
+      "name" : "Dunjin Devlog #1",
+      "headline" : "Dunjin Devlog #1",
+      "description" : "The Making of a Smash Clone",
       "inLanguage" : "en-US",
       "author" : "",
       "creator" : "",
@@ -122,7 +122,7 @@
       <div class="post__container">
         <div class="post">
           <header class="post__header">
-            <h1 id="post__title">Making a Smash Clone</h1>
+            <h1 id="post__title">Dunjin Devlog #1</h1>
             <time datetime="2025-04-08 15:53:03 -0400 EDT" class="post__date">Apr 8 2025</time> 
           </header>
           <article class="post__content">
@@ -158,7 +158,7 @@
 <h2 id="systems">Systems<a class="anchor" href="#systems">#</a></h2>
 <h3 id="offensive-options">Offensive options<a class="anchor" href="#offensive-options">#</a></h3>
 <p>The Knight has a set of 3 types of attacks, normals, specials, aerials - which are all directional. Normals are just tilts and smashes, if you&rsquo;re familiar with the Smash Bros system. The main motivation behind not having separate smashes is that I didn&rsquo;t want to do more animations for unique smash attacks - instead just making them tilts with more damage, endlag, startup. This system isn&rsquo;t in the game yet since it depends on me reworking the input system, which I&rsquo;ll get into later.</p>
-<p>Specials are a little more interesting, but still ultimately basic. They&rsquo;re similar ot normal attacks, but they either have more knockback, or add momentum to the player for traversal. I haven&rsquo;t done any more interesting specials yet, but they&rsquo;ll come with other characters. There&rsquo;s 1 protectile attack, the neutral special, which doesn&rsquo;t do any knockback, and acts more like a fox laser.</p>
+<p>Specials are a little more interesting, but still ultimately basic. They&rsquo;re similar ot normal attacks, but they either have more knockback, or add momentum to the player for traversal. I haven&rsquo;t done any more interesting specials yet, but they&rsquo;ll come with other characters. There&rsquo;s 1 projectile attack, the neutral special, which doesn&rsquo;t do any knockback, and acts more like a fox laser.</p>
 <h3 id="defensive-options">Defensive options<a class="anchor" href="#defensive-options">#</a></h3>
 <p>The Knight has a shield, which is a little different from smash. It has a fixed size, does not drain on hit, and is not directional, but it does have a parry mechanic. There is a 4-frame window at the start of shield where you can parry an attack, putting the enemy in a 60 frame stun. Parrying also reflects projectiles, like powershielding. Which leads to fun games of dodgeball.</p>
 <p>Shields automatically drop after 5 seconds, and you can roll out of shield, with a decent bit of endlag. The shield system as a whole is another major target for improvement, as I want to add shield health and shield breaks. I want there to be a risk/reward system for shielding, and maybe be able to balance it for individual characters - so less shield health for a weaker character or something similar. The details aren&rsquo;t ironed out yet, but I&rsquo;m planning on taking more inspo from D&amp;D, so something like Armor Classes, where you don&rsquo;t fully nullify attacks but just take a percentage of the original damage based on your AC.</p>

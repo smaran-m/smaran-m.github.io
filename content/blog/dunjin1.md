@@ -1,8 +1,8 @@
 ---
-title: "Making a Smash Clone"
+title: "Dunjin Devlog #1"
 date: 2025-04-08T15:53:03-04:00
 slug: ""
-description: "DUNJIN DEVLOG #1"
+description: "The Making of a Smash Clone"
 keywords: [gamedev, graphics, godot, indiegame]
 draft: false
 tags: [devlog]
@@ -51,7 +51,7 @@ This is a bulk of where my work went. I was able to get a lot of the core smash 
 ### Offensive options
 The Knight has a set of 3 types of attacks, normals, specials, aerials - which are all directional. Normals are just tilts and smashes, if you're familiar with the Smash Bros system. The main motivation behind not having separate smashes is that I didn't want to do more animations for unique smash attacks - instead just making them tilts with more damage, endlag, startup. This system isn't in the game yet since it depends on me reworking the input system, which I'll get into later.
 
-Specials are a little more interesting, but still ultimately basic. They're similar ot normal attacks, but they either have more knockback, or add momentum to the player for traversal. I haven't done any more interesting specials yet, but they'll come with other characters. There's 1 protectile attack, the neutral special, which doesn't do any knockback, and acts more like a fox laser.
+Specials are a little more interesting, but still ultimately basic. They're similar ot normal attacks, but they either have more knockback, or add momentum to the player for traversal. I haven't done any more interesting specials yet, but they'll come with other characters. There's 1 projectile attack, the neutral special, which doesn't do any knockback, and acts more like a fox laser.
 
 ### Defensive options
 The Knight has a shield, which is a little different from smash. It has a fixed size, does not drain on hit, and is not directional, but it does have a parry mechanic. There is a 4-frame window at the start of shield where you can parry an attack, putting the enemy in a 60 frame stun. Parrying also reflects projectiles, like powershielding. Which leads to fun games of dodgeball.
