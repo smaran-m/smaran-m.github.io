@@ -23,7 +23,7 @@ So what game would let me do something like that? Really, the only thing with th
 # Dunjin
 is a fighting game that plays into fantasy tropes, with a focus on gameplay. Honestly, all the stuff above was an overexaggeration. I just played D&D for the first time in a while and I was like "wow, combat suuuuucks". Then I watched a Smash Ultimate match and was like "dang there are so many swordies this suuuuucks. What if it was all swordies. Wait."
 
-You get the rest. I was also unemployed after graduating so that might have played a part in it. Probably a big part, actually, but I digress. I've put in probably 3 months of work into this thing since, in between school and other work, but what is it actually about?
+You get the rest. I was also unemployed after graduating so that might have played a part in it. Probably a big part, actually, but I digress. I've put in anout 3 months of work into this thing since, in between school and other work, but what have I been working on?
 
 ## Story
 You have been thrown into an ancient megastructure, 'Dunjin', for crimes committed against the general public. It towers into the heavens, and digs deep into hell. The history of this structure has been lost to time, it is older than you, older than your people, older than recorded history. Some claim it once served as a stairway to the heavens; some claim it was the magnum opus of an architect who was then left inside to rot; some claim it was a gift from the gods for the suppression of evil. The words to describe its truth have not been spoken in millennia.
@@ -35,8 +35,8 @@ Currently, the only character is the Knight, with a couple others in the works. 
 
 I'm aiming for somewhere around 6 characters on release, since animating each character is quite a bit of work, but haven't decided on all 6. I might throw in some clones too, since those are easier to pump out with some of the tools I've made.
 
-## Setting
-Medieval fighting game has actually been done before, like in [Battle Fantasia](https://www.youtube.com/watch?v=hbXkcEZhflA). That's not the extent of my gimmick. My gimmick has far wider implications and is embedded in the very mechanics of the game. My gimmick is a feature.
+## Themes
+Medieval/JRPG fighting game has actually been done before, like in [Battle Fantasia](https://www.youtube.com/watch?v=hbXkcEZhflA). That's not the extent of my gimmick. My gimmick has far wider implications and is embedded in the very mechanics of the game. My gimmick is a feature.
 
 I'm trying very hard to tie everything into the mechanics, while staying in line with the relevant tropes. More info on this in a future blog post, when I'm done with single player.
 
@@ -85,29 +85,100 @@ I personally think my plans for integrating the two are pretty cool, but I don't
 
 # Graphics
 ## Animation
-I initially animated everything with a fixed 100ms frame duration in Aseprite, but this was way too slow for fighting game timings, since that means each frame is equal to roughly 6 frames in engine at 60fps. That said, animating at actual 60fps (17ms between frames) is way too much work and it also looks too fluid for pixel art, so I'm working with a variable fps, with anywhere from 33-100ms frame timings depending on the animation. A lot of animations have more frames on startup than during endlag, so they come out quick, and linger for a while. As you can imagine, this is hell to manage in-engine, but it's good, honest work. In total, the Knight character has 242 frames of animation, and I envision this rising to 300 with all the nice-to-haves.
+I initially animated everything with a fixed 100ms frame duration in Aseprite, but this was way too slow for fighting game timings, since that means each frame is equal to roughly 6 frames in engine at 60fps. That said, animating at actual 60fps (17ms between frames) is way too much work and it also looks too fluid for pixel art, so I'm working with a variable fps, with anywhere from 33-100ms frame timings depending on the animation. A lot of animations have more frames on startup than during endlag, so they come out quick, and linger for a while. I've had to delete some frames in order to make attacks come out fast enough, etc. As you can imagine, this is hell to manage in-engine, but it's good, honest work. In total, the Knight character has 242 frames of animation, and I envision this rising to 300 with all the nice-to-haves (like distinct throws and dodges).
 
 ## Graphics Pipeline
-This is one of the things I'm happiest for the current state of the game, and it's how I'm getting the blended 2d-3d look. A lot of the work has been done already, and I just had to put everything together to get the look I wanted. You could argue that graphics starts with the sprites, but all the sprites are flat colors, and unshaded. This is what the game looks like in its base state.
+This is one of the things I'm happiest for the current state of the game, and it's how I'm getting the blended 2d-3d look. A lot of the work has been done already, and I just had to put everything together to get the look I wanted. You could argue that graphics starts with the sprites, but all the sprites are flat colors, and unshaded. One funny note is that I hadn't at all thought about palettes when starting out and just used the default dawnbreaker 32 palette inside Aseprite, which is more saturated than I wanted things to be. This is what the game looks like in its base state.
 
 The pipeline is as follows:
 ### Automatic Normal map generation
+![normals](/images/dunjin1/normals.png)
+
+Processed in Aseprite and Krita using [this post](https://www.reddit.com/r/godot/comments/1hha384/a_time_poor_mans_normal_map_generation_for_pixel/) as a guideline.
 
 ### Lighting In-Engine
+![normals](/images/dunjin1/normal-engine.png)
 
 ### Palette Remapping Shader
+![normals](/images/dunjin1/palettes.png)
+
+
+![palettes](/images/dunjin1/palette-lighting.gif)
+
+The effect here's a little more visible with different colored lighting: there are fewer green shades in the palette so it appears a little flatter in green light. I can change the number of colors and palette texture in the shader, it uses a 1xN texture that Lospec exports natively. It's not performant at the moment, but neither is the CRT shader, and I'll figure both out later.
+
+```
+shader_type canvas_item;
+
+uniform sampler2D screen_texture : hint_screen_texture;
+uniform sampler2D palette_texture;
+uniform int palette_width = 32;
+uniform float brightness_influence : hint_range(0.0, 1.0) = 0.8;
+uniform float effect_strength : hint_range(0.0, 1.0) = 1.0;
+
+void fragment() {
+    vec4 original = texture(screen_texture, SCREEN_UV);
+
+    float brightness = dot(original.rgb, vec3(0.299, 0.587, 0.114));
+
+    vec4 closest_color = vec4(0.0, 0.0, 0.0, original.a);
+    float min_distance = 10000.0;
+
+
+    // inefficient
+    for (int i = 0; i < palette_width; i++) {
+        vec2 palette_coord = vec2(float(i) / float(palette_width) + 0.5/float(palette_width), 0.5);
+        vec4 palette_color = texture(palette_texture, palette_coord);
+
+        float dist = length(original.rgb - palette_color.rgb);
+
+        // inefficient
+        if (dist < min_distance) {
+            min_distance = dist;
+            closest_color = palette_color;
+            closest_color.a = original.a;
+        }
+    }
+
+    closest_color.rgb = mix(closest_color.rgb, closest_color.rgb * brightness, brightness_influence);
+
+    COLOR = mix(original, closest_color, effect_strength);
+}
+```
 
 ### CRT Shader
+![normals](/images/dunjin1/crts.png)
+
+I should add that this looks a little different on my own monitor, a little closer to a sub-pixel dither effect. I'm not show how this looks on other settings, but for my purposes, I quite like it. It'll be off by default.
+
+![normals](/images/dunjin1/crt-irl.jpg)
+
+I got the shader [here](https://godotshaders.com/shader/crt-shader-with-realistic-blurring/).
+
 
 ## Audio
 ### SFX
-It's there, but it's mostly placeholders right now. I don't want to commit too hard to the bitcrushed audio sound, but I probably will have a slight effect on the bus. Currently, I think damage in particular is grating, but I'm in the process of finding better sounds. Admittedly, audio is one of my weaker points, and I haven't worked on audio systems enough to know about the magic that audio engineering entails.
+The audio system and manager is there, but it's mostly using placeholders right now. I don't want to commit too hard to the bitcrushed audio sound, but I probably will have a slight effect on the bus. Currently, I think damage in particular is grating, but I'm in the process of finding better sounds. Admittedly, audio is one of my weaker points, and I haven't worked on audio systems enough to know about the magic that audio engineering entails.
 
 Each character currently only has voice sfx on specials, grabs, and taunts. I'm undecided on voice acting, and frankly don't think I'll have full VA. I think there's a charm to basic grunts with each dialong bos to indicate tone, or a beep noise on every letter like in classic JRPGs. Animal-crossing style phonetic sounds are also in fashion right now, but they don't feel authentic to what I'm doing.
 
 ### Music
 I've worked on some songs for the soundtrack, but haven't really been happy with any of them except the main menu theme. It interpolates a sweet trip song. Here's the inspo:
+<br>
+
 [![main theme](https://img.youtube.com/vi/FseYuqzoLSQ/0.jpg)](https://www.youtube.com/watch?v=FseYuqzoLSQ)
+
+For battle music, I really wanted to stay away from the orchestral swells of something like Elden Ring, or like Witcher 3 combat themes which often served as background loops for D&D games. I feel like they fit the theme the most, but aren't that memorable? They also just don't fit the vibes of a fighting game, in my opinion, the tempo isn't there. So, inspiration had to come from elsewhere, and it took me a long time before I realized that the perfect fit: japanese flamenco.
+
+You've probably heard these songs before: [Gerudo Valley](https://www.youtube.com/watch?v=0hEYvdMoF2g) and [Dragon Roost Island](https://www.youtube.com/watch?v=SXGGvsHq6iA) from the Legend of Zelda series, maybe [Vamo'alla Flamenco](https://www.youtube.com/watch?v=RAxmjZVb_HQ) from Final Fantasy 9? In fact, this is a very JRPG-specific trend - I think it's from Japan's fascination with the Spanish Guitar. If you dig a little deeper you find similar stuff in [Romancing SaGa (1994)](https://www.youtube.com/watch?v=sNvWC_lTP38) and more recently, [Tales of Zestiria (2015)](https://www.youtube.com/watch?v=_nsDUPGU5Nw). [My favorite JRPG song of all time](https://www.youtube.com/watch?v=1CyRX3x6aDY) also falls victim to the Spanish Guitar. I thought it would be super novel and interesting to use these as the basis for a fighting game, yet, it seems (as in many cases) that I was beaten to the punch by Touhou.
+
+Touhou Hisouten is the 10.5th (?) installment in the Touhou Franchise, and the 2nd fighting game in the Touhou Franchise (??) after Touhou Suimusou. These games, however, were not developed by ZUN, but rather by Twilight Frontier. Similarly, the soundtracks only had 1 or 2 songs each by ZUN, with a majority done by NKZ and U2 Akiyama, the latter of whom doesn't know how to make anything other than bangers. No, seriously:
+<br>
+
+[![Azakeri no Yuugi](https://img.youtube.com/vi/5uW76nWl7uQ/0.jpg)](https://www.youtube.com/watch?v=5uW76nWl7uQ)
+
+
+Anyways, I'm just gonna try copy him. The music I've made will be up when it's ready, but I'm open to letting others handle soundtrack since I am by no means good at it.
 
 ## Tools
 A lot of the work I've been doing has been in making tools that allow for the creation of skins, characters, and swaps easier.
